@@ -1,0 +1,50 @@
+<?php
+ /*  
+	//ESTE FUNCIONA PERFECTAMENTE
+require("class.phpmailer.php"); //incluimos la libreria phpmailer  
+$mail = new PHPMailer();
+
+//PROPIEDADES DEL MENSAJE
+  $mail->IsSMTP();// send via SMTP  
+  $mail->SMTPAuth = true; // turn on SMTP authentication  
+  $mail->Host = 'ssl://smtp.gmail.com';  
+  $mail->Port = 465;  
+  $mail->Username = 'alcaldiacss.sicodip@gmail.com'; // SMTP username  
+  $mail->Password = 'sicodip2010';// SMTP password  
+  $mail->IsHTML(true); // send as HTML 
+  $mail->Body="<p>SICODIP</p>  ";  
+
+// Introducimos la información del remitente del mensaje  
+  $mail->From       = "";  
+  $mail->FromName   = "";  
+//Asunto  
+  $mail->Subject    = "Alcaldia de CCS - SICODIP";  
+  
+// y los destinatarios del mensaje. Podemos especificar más de un destinatario  
+  $mail->AddAddress('fransan84@gmail.com','fransan');  
+  $mail->AddAttachment("images/leon.jpg");// adjuntamos un imagen o un file   
+ 
+  $res= $mail->Send();
+  echo $res;
+  $mail = new PHPMailer();*/
+
+/*require_once 'Mail.php';
+require_once 'Mail/mime.php';
+$destinario = 'fransan84@gmail.com';
+$from = 'alcaldiacss.sicodip@gmail.com';
+$asunto = 'Asunto del mensaje';
+$mensaje = '<html><head><title>'.$asunto.'</title></head>'."\n";
+$mensaje .= '<body><p><h1>Hola</h1></body></html>';
+$mime = new Mail_mime("\n");
+$mime->setTXTBody(strip_tags($mensaje));
+$mime->setHTMLBody($mensaje);
+//$mime->addAttachment('fichero_adjunto.zip', 'application/zip');
+$body = $mime->get();
+$hdrs = array('From' => $from, 'Subject' => $asunto);
+$hdrs = $mime->headers($hdrs);
+$mail =& Mail::factory('mail');
+$res = $mail->send($destinario, $hdrs, $body);
+if (PEAR::isError($res)) echo 'error enviando el email';*/
+
+?>
+
